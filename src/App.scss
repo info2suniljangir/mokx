@@ -1,0 +1,325 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.colorPurple {
+  color: #69235B;
+}
+
+.backgroundColorPurple {
+  background-color: #69235B;
+}
+
+.responsiveMargin {
+  margin-top: 7rem;
+}
+
+//login page
+
+
+.socialMediaLogos {
+
+  img {
+  border: 1px solid #69235B;
+  border-radius: 50%;
+  padding: 10px;
+}
+}
+
+.helper {
+
+  p {
+      width: 40px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+      background: #fff;
+  }
+
+  .border {
+    position: relative;
+    margin-top: -16px;
+    margin-bottom: 12px;
+    border: none;
+    border-top: 1px solid #CDD1D0;
+  }
+}
+
+.loginButton {
+  margin-top: 2rem;
+  
+}
+
+ .form-control {
+  &:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+  }
+ }
+
+ 
+
+
+//login page media query
+@media screen and (min-width: 576px) and (max-width: 768px) {
+ .loginButton {
+   margin-top: 10rem;
+   font-size: 20px;
+  font-weight: 500;
+ }
+}
+
+@media screen  and (max-width: 576px) {
+  .loginButton {
+    margin-top: 14rem;
+    font-size: 20px;
+   font-weight: 500;
+  }
+ }
+
+//signup extra add on
+.logo-in-signup {
+  height: 64px;
+  width: 72px;
+}
+
+//onboarding page
+
+
+
+.boarding-container {
+  width: 100%;
+  line-height: 40px;
+  // height: 100%;
+}
+
+.App {
+  width: 100%;
+}
+
+.pray-img {
+  height: 334px;
+}
+
+.yelloColor {
+  color: #FFC746;
+}
+
+@media screen and (max-width: 768px)  {
+  .discoveryText {
+    font-size: 32px;
+    font-weight: 600px;
+    line-height: 40px;
+  }
+
+  .journeyText {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+  }
+}
+
+.socialMediaLogos-boarding {
+
+  img {
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  padding: 10px;
+}
+}
+
+.helper-boarding {
+  p {
+    background: #69235B;
+  }
+}
+
+//messages
+
+.chat-message {
+  font-size: 12px;
+}
+  
+
+//messagegs
+
+.chat-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.chat-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.chat {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages {
+  flex: 1;
+  // overflow-y: auto;
+  padding: 10px;
+}
+
+.message {
+  max-width: 80%;
+  padding: 8px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+}
+
+.bot {
+  background-color: #eaeaea;
+  align-self: flex-start;
+}
+
+.user {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+  color: #000;
+}
+
+
+
+//chat input 
+
+.inputBox {
+  position: fixed;
+  bottom: 0px;
+  width: 60%;
+  padding-bottom: 1rem;
+  background-color: white;
+
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  position: relative; /* Added for positioning the image */
+  
+  
+  
+  
+}
+
+@media screen and (max-width: 767px) {
+  .inputBox {
+    width: 90%;
+  }
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px 40px 8px 8px; /* Increased right padding for the image */
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  
+}
+
+
+/* Add hover and active states if needed */
+.chat-input button:hover {
+  background-color: #f0f0f0;
+}
+
+.chat-input button:active {
+  background-color: #e0e0e0;
+}
+
+
+
+.messages-container {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  // min-width: 400px;
+  .bot-message {
+    border-radius: 0px 10px 10px 10px;
+    // max-width: 300px;
+    align-self: flex-start;
+    
+  }
+  
+  .user-message {
+    border-radius: 10px 0px 10px 10px;
+    
+    align-self: flex-end;
+    // align-items: flex-end;
+    // min-width: 250px;
+  }
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.messages-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.messages-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Responsive max-height for different breakpoints */
+@media (max-width: 767px) {
+  .messages-container {
+    max-height: 80%; /* Adjust the value for mobile screens */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .messages-container {
+    max-height: 700px; /* Adjust the value for tablet screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .messages-container {
+    max-height: 400px; /* Adjust the value for larger screens */
+  }
+
+}
+
+
+.bot-pic {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+//card properties
+.card {
+  padding: 2em;
+}
+
+@media (max-width: 768px) {
+  
+  .card {
+    border: none;
+  }
+}
+
+.minWidth {
+  min-width: 300px;
+}
+
+
+
